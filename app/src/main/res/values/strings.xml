@@ -3,4 +3,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="questionOne">1. Jak se jmenuje tým, který reprezentuje Jan Černý v rally 2015?</string>
+    <string name="responseOneOne">Adel Mogul Rallye Racing Team</string>
+    <string name="responseOneTwo">MOGUL ADELL Racing Team</string>
+    <string name="responseOneThree">Peugeot Racing Team</string>
+    <string name="questionTwo">2. Jaký olej používá Jan Černý ve svém závodním voze?</string>
+    <string name="responseTwoOne">Castrol Edge 10W-60</string>
+    <string name="responseTwoTwo">MOGUL 5W-50 EXTREME Sport</string>
+    <string name="responseTwoThree">Trysk Speed 5W-30</string>
 </resources>

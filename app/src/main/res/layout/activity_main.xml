@@ -1,42 +1,378 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+
+        <ImageView
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/logo"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:textSize="18sp"
+                android:text="@string/questionOne"/>
+
+        <RadioGroup
+                android:id="@+id/radioGroupOne"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context=".MainActivity">
-
-
-    <RadioGroup
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="horizontal">
-
-        <com.rey.material.widget.RadioButton
-                style="@style/Material.Drawable.RadioButton"
-                android:layout_width="wrap_content"
-                android:gravity="center"
                 android:layout_height="wrap_content"
-                android:text="Radio Button"
-                android:id="@+id/view"/>
-
-        <com.rey.material.widget.RadioButton
-                style="@style/Material.Drawable.RadioButton"
-                android:layout_width="wrap_content"
                 android:gravity="center"
-                android:layout_height="wrap_content"
-                android:text="Radio Button"
-                android:id="@+id/view1"/>
+                android:orientation="horizontal">
 
-        <com.rey.material.widget.RadioButton
-                style="@style/Material.Drawable.RadioButton"
+            <com.rey.material.widget.RadioButton
+                    style="@style/Material.Drawable.RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/responseColor"
+                    android:text="@string/responseOneOne"
+                    android:id="@+id/responseOneOne"
+                    app:rbd_strokeColor = "@color/editText"/>
+
+            <com.rey.material.widget.RadioButton
+                    style="@style/Material.Drawable.RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/responseColor"
+                    android:layout_height="wrap_content"
+                    android:text="@string/responseOneTwo"
+                    app:rbd_strokeColor = "@color/editText"
+                    android:id="@+id/responseOneTwo"/>
+
+            <com.rey.material.widget.RadioButton
+                    style="@style/Material.Drawable.RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/responseColor"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/responseOneThree"
+                    app:rbd_strokeColor = "@color/editText"
+                    android:id="@+id/responseOneThree"/>
+        </RadioGroup>
+
+
+        <!-- question two -->
+
+        <TextView
                 android:layout_width="wrap_content"
-                android:gravity="center"
                 android:layout_height="wrap_content"
-                android:text="Radio Button"
-                android:id="@+id/view2"/>
-    </RadioGroup>
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="18sp"
+                android:text="@string/questionTwo"/>
 
-</RelativeLayout>
+        <RadioGroup
+                android:id="@+id/radioGroupTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <com.rey.material.widget.RadioButton
+                    style="@style/Material.Drawable.RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/responseColor"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:text="@string/responseTwoOne"
+                    app:rbd_strokeColor = "@color/editText"
+                    android:id="@+id/responseTwoOne"/>
+
+            <com.rey.material.widget.RadioButton
+                    style="@style/Material.Drawable.RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/responseColor"
+                    android:layout_height="wrap_content"
+                    android:text="@string/responseTwoTwo"
+                    app:rbd_strokeColor = "@color/editText"
+                    android:id="@+id/responseTwoTwo"/>
+
+            <com.rey.material.widget.RadioButton
+                    style="@style/Material.Drawable.RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/responseColor"
+                    app:rbd_strokeColor = "@color/editText"
+                    android:layout_height="wrap_content"
+                    android:text="@string/responseTwoThree"
+
+                    android:id="@+id/responseTwoThree"/>
+        </RadioGroup>
+
+        <!-- question tree -->
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+
+                android:text="3. Jakou značku auta vlastníte nebo používáte nejvíce?"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/questionTree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="120dp"
+                app:floatingLabel="highlight"
+                app:baseColor="@color/responseColor"
+                app:primaryColor="@color/editText"
+                android:textSize="18sp"/>
+
+        <!-- question four -->
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:text="4. Jak starý je tento automobil?"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/questionFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="100dp"
+                app:floatingLabel="highlight"
+                android:textSize="18sp"
+                app:baseColor="@color/responseColor"
+                app:primaryColor="@color/editText"/>
+
+        <!-- question five -->
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:text="5. Jakou značku a typ oleje máte nyní v tomto automobilu?"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/questionFive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="100dp"
+                app:floatingLabel="highlight"
+                app:baseColor="@color/responseColor"
+                app:primaryColor="@color/editText"/>
+
+
+        <!-- question six -->
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:text="6. Co je pro vás nejdůležitější při výběru oleje? (cena, technické parametry, doporučení známého, doporučení servisu, značka oleje, jiné - uveďte)"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/questionSix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="120dp"
+                app:floatingLabel="highlight"
+                app:baseColor="@color/responseColor"
+                app:primaryColor="@color/editText"/>
+
+        <!-- question eight -->
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="18sp"
+                android:text="7. Jak hodnotíte kvalitu olejů MOGUL? (na školní stupnici, 1-nejlepší , 5-nejhorší)"/>
+
+            <RadioGroup
+                    android:id="@+id/radioGroupEight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.rey.material.widget.RadioButton
+                            style="@style/Material.Drawable.RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/responseColor"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            app:rbd_strokeColor = "@color/editText"
+                            android:textSize="18sp"
+                            android:text="1"
+                            android:id="@+id/responseSevenOne"/>
+
+                    <com.rey.material.widget.RadioButton
+                            style="@style/Material.Drawable.RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/responseColor"
+                            android:layout_height="wrap_content"
+                            app:rbd_strokeColor = "@color/editText"
+                            android:text="2"
+                            android:id="@+id/responseSevenTwo"/>
+
+                    <com.rey.material.widget.RadioButton
+                            style="@style/Material.Drawable.RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/responseColor"
+                            app:rbd_strokeColor = "@color/editText"
+                            android:layout_height="wrap_content"
+                            android:text="3"
+                            android:id="@+id/responseSevenThree"/>
+
+                    <com.rey.material.widget.RadioButton
+                            style="@style/Material.Drawable.RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/responseColor"
+                            android:layout_height="wrap_content"
+                            android:text="4"
+                            app:rbd_strokeColor = "@color/editText"
+                            android:id="@+id/responseSevenFour"/>
+
+                    <com.rey.material.widget.RadioButton
+                            style="@style/Material.Drawable.RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/responseColor"
+                            android:layout_height="wrap_content"
+                            android:text="5"
+                            app:rbd_strokeColor = "@color/editText"
+                            android:id="@+id/responseSevenFive"/>
+            </RadioGroup>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="16dp"
+                            android:textSize="18sp"
+                            android:text="Vaše jméno a příjmení:"/>
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/textName"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            app:floatingLabel="highlight"
+                            app:baseColor="@color/responseColor"
+                            app:primaryColor="@color/editText"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="16dp"
+                            android:textSize="18sp"
+                            android:text="Váš e-mail:"/>
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/textMail"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            app:floatingLabel="highlight"
+                            app:baseColor="@color/responseColor"
+                            app:primaryColor="@color/editText"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="16dp"
+                            android:textSize="18sp"
+                            android:text="Vaše jméno a příjmení:"/>
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/textPhone"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            app:floatingLabel="highlight"
+                            app:baseColor="@color/responseColor"
+                            app:primaryColor="@color/editText"/>
+
+            </LinearLayout>
+
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    app:rippleColor="#ff0b152c"
+                    app:rippleOverlay="true"
+                    app:rippleDelayClick="false"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                            android:id="@+id/buttonSend"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#fff"
+                            android:background="@color/editText"
+                            android:text="Odeslat"/>
+            </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+</ScrollView>
